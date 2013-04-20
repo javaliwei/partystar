@@ -13,8 +13,6 @@
     CGSize winSize;
 }
 
-@property (nonatomic, readonly) CGSize winSize;
-
 @end
 
 

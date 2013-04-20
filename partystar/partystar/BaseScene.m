@@ -10,8 +10,6 @@
 
 @implementation BaseScene
 
-@synthesize winSize;
-
 -(id)init{
     if(self = [super init]){
         winSize = [[CCDirector sharedDirector] winSize];

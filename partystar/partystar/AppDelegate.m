@@ -88,7 +88,7 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [GameScene scene]]; 
+	[director_ pushScene: [IntroLayer scene]];
 
 	
 	// Create a Navigation Controller with the Director
@@ -102,6 +102,17 @@
 	// make main window visible
 	[window_ makeKeyAndVisible];
 	
+    
+    // 取得用户默认信息
+    
+    NSUserDefaults *defaults = [ NSUserDefaults standardUserDefaults ];
+    
+    // 取得 iPhone 支持的所有语言设置
+    
+    NSArray *languages = [defaults objectForKey : @"AppleLanguages" ];
+    
+    NSLog ( @"AppleLanguages：%@" , languages);
+    
 	return YES;
 }
 

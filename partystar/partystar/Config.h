@@ -18,6 +18,7 @@
 #define WEIXIN_APP_ID @"wx958e9703d9ba5ae9"
 
 #define DEF_FONT_SIZE 26
+#define IPHONE5_HEIGHT 568
 
 enum TAGS {
     tag_home_spy = 1000,
