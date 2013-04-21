@@ -43,4 +43,6 @@
     CGPoint bgLocation;
 }
 
++(id)scene;
+
 @end

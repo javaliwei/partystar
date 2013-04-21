@@ -102,17 +102,6 @@
 	// make main window visible
 	[window_ makeKeyAndVisible];
 	
-    
-    // 取得用户默认信息
-    
-    NSUserDefaults *defaults = [ NSUserDefaults standardUserDefaults ];
-    
-    // 取得 iPhone 支持的所有语言设置
-    
-    NSArray *languages = [defaults objectForKey : @"AppleLanguages" ];
-    
-    NSLog ( @"AppleLanguages：%@" , languages);
-    
 	return YES;
 }
 

@@ -13,9 +13,23 @@
 -(id)init{
     if(self = [super init]){
         winSize = [[CCDirector sharedDirector] winSize];
-        
+        [self setLocation];
+        [self addBackground];
+        [self addGameMenu];
     }
     return self;
+}
+
+-(void)setLocation{
+    
+}
+
+-(void)addBackground{
+    
+}
+
+-(void)addGameMenu{
+    
 }
 
 @end

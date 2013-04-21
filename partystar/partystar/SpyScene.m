@@ -21,8 +21,8 @@
 -(id)init{
     if(self = [super init]){
         self.isTouchEnabled = YES;
-        CCLabelTTF* titleLabel = [CCLabelTTF labelWithString:@"谁是卧底设置"];
-        titleLabel.position = ccp(padding+titleLabel.width/2, winSize.height-titleLabel.height/2-padding);
+        CCLabelTTF* titleLabel = [CCLabelTTF labelWithString:@"设置"];
+        titleLabel.position = ccp(winSize.width-(padding+titleLabel.width/2), winSize.height-titleLabel.height/2-padding);
         [self addChild:titleLabel];
         
         

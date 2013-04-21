@@ -13,6 +13,10 @@
     CGSize winSize;
 }
 
+-(void)setLocation;
+-(void)addBackground;
+-(void)addGameMenu;
+
 @end
 
 

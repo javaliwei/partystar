@@ -12,17 +12,8 @@
 
 @implementation HomeScene
 
-//CGPoint gameSpyLocation;
-//CGPoint gameGuessLocation;
-//CGPoint gameMoreLocation;
-//CGPoint moreLocation;
-//CGPoint storeLocation;
-//
-//CGPoint titleLocation;
-//CGPoint titleLabelLocation;
-//CGPoint bgLocation;
 
--(void)setMenuLocation{
+-(void)setLocation{
     
     titleLocation = ccp(winSize.width*0.5,winSize.height*0.8);
     
@@ -32,7 +23,7 @@
     
     gameMoreLocation = ccp(winSize.width*0.5,winSize.height*0.5);
     
-    settingLocation = ccp(winSize.width*0.5,winSize.height*0.5);
+    settingLocation = ccp(winSize.width*0.35, -winSize.height*0.40);
     
     
     
@@ -158,17 +149,8 @@
 -(id)init{
     if((self  =[super init])){
         CCLOG(@"%@: %@", NSStringFromSelector(_cmd), self);
-        //设置各视觉元素在屏幕中的位置
-        [self setMenuLocation];
-        //添加游戏标题和背景
+        
         [self addGameTitle];
-        [self addBackground];
-        //添加菜单选项
-        [self addGameMenu];
-        //播放背景音乐
-        //[self playBackgroundMusic];
-        //添加音效设置开关
-        //[self createSoundSettingMenu];
     }
     return self;
 }
