@@ -153,6 +153,11 @@
 		DBD54DC81716F978006AD5E0 /* SpyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD54DC71716F978006AD5E0 /* SpyScene.m */; };
 		DBD54DCC1716F9CB006AD5E0 /* SpyIdentityScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD54DCB1716F9CB006AD5E0 /* SpyIdentityScene.m */; };
 		DBD54DD01716F9DD006AD5E0 /* SpyVoteScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD54DCF1716F9DD006AD5E0 /* SpyVoteScene.m */; };
+		DBE1A895172679CF001EB1E2 /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE1A894172679CF001EB1E2 /* SceneManager.m */; };
+		DBE1A89C172691B0001EB1E2 /* cardBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE1A89A172691B0001EB1E2 /* cardBg@2x.png */; };
+		DBE1A89D172691B0001EB1E2 /* cardBg.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE1A89B172691B0001EB1E2 /* cardBg.png */; };
+		DBE1A8A01726D33D001EB1E2 /* GameSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE1A89F1726D33D001EB1E2 /* GameSettings.m */; };
+		DBE1A8A31726E2B0001EB1E2 /* SettingLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE1A8A21726E2B0001EB1E2 /* SettingLoader.m */; };
 		DBF73C1C171BE0A600D52DC5 /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBF73BEE171BE0A600D52DC5 /* SinaWeibo.bundle */; };
 		DBF73C1D171BE0A600D52DC5 /* SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF73BF0171BE0A600D52DC5 /* SinaWeibo.m */; };
 		DBF73C1E171BE0A600D52DC5 /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF73BF3171BE0A600D52DC5 /* SinaWeiboRequest.m */; };
@@ -466,6 +471,14 @@
 		DBD54DCB1716F9CB006AD5E0 /* SpyIdentityScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpyIdentityScene.m; sourceTree = "<group>"; };
 		DBD54DCE1716F9DD006AD5E0 /* SpyVoteScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpyVoteScene.h; sourceTree = "<group>"; };
 		DBD54DCF1716F9DD006AD5E0 /* SpyVoteScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpyVoteScene.m; sourceTree = "<group>"; };
+		DBE1A893172679CF001EB1E2 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
+		DBE1A894172679CF001EB1E2 /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneManager.m; sourceTree = "<group>"; };
+		DBE1A89A172691B0001EB1E2 /* cardBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cardBg@2x.png"; sourceTree = "<group>"; };
+		DBE1A89B172691B0001EB1E2 /* cardBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBg.png; sourceTree = "<group>"; };
+		DBE1A89E1726D33C001EB1E2 /* GameSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSettings.h; sourceTree = "<group>"; };
+		DBE1A89F1726D33D001EB1E2 /* GameSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSettings.m; sourceTree = "<group>"; };
+		DBE1A8A11726E2B0001EB1E2 /* SettingLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingLoader.h; sourceTree = "<group>"; };
+		DBE1A8A21726E2B0001EB1E2 /* SettingLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingLoader.m; sourceTree = "<group>"; };
 		DBF73BEE171BE0A600D52DC5 /* SinaWeibo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SinaWeibo.bundle; sourceTree = "<group>"; };
 		DBF73BEF171BE0A600D52DC5 /* SinaWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeibo.h; sourceTree = "<group>"; };
 		DBF73BF0171BE0A600D52DC5 /* SinaWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeibo.m; sourceTree = "<group>"; };
@@ -545,9 +558,13 @@
 			children = (
 				DBA08E3517145CCC00B2DF4C /* Config.h */,
 				DBA08D9C1714196400B2DF4C /* AppDelegate.h */,
+				DBE1A893172679CF001EB1E2 /* SceneManager.h */,
+				DBE1A894172679CF001EB1E2 /* SceneManager.m */,
 				DBA08D9D1714196400B2DF4C /* AppDelegate.m */,
 				DBA08DA21714196400B2DF4C /* IntroLayer.h */,
 				DBA08DA31714196400B2DF4C /* IntroLayer.m */,
+				DBE1A89E1726D33C001EB1E2 /* GameSettings.h */,
+				DBE1A89F1726D33D001EB1E2 /* GameSettings.m */,
 			);
 			name = "System Classes";
 			sourceTree = "<group>";
@@ -562,6 +579,8 @@
 		DB6E8A4E1720065D001EF97E /* Util Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DBE1A8A11726E2B0001EB1E2 /* SettingLoader.h */,
+				DBE1A8A21726E2B0001EB1E2 /* SettingLoader.m */,
 			);
 			name = "Util Classes";
 			sourceTree = "<group>";
@@ -630,6 +649,8 @@
 		DBA08C251714196200B2DF4C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBE1A89A172691B0001EB1E2 /* cardBg@2x.png */,
+				DBE1A89B172691B0001EB1E2 /* cardBg.png */,
 				DB6E8A5717202CCC001EF97E /* logo_home@2x.png */,
 				DB6E8A5817202CCC001EF97E /* logo_home.png */,
 				DB6E8A51172027E7001EF97E /* bg-iphone5.png */,
@@ -1226,6 +1247,8 @@
 				DB6E8A56172027E7001EF97E /* bg.png in Resources */,
 				DB6E8A5917202CCC001EF97E /* logo_home@2x.png in Resources */,
 				DB6E8A5A17202CCC001EF97E /* logo_home.png in Resources */,
+				DBE1A89C172691B0001EB1E2 /* cardBg@2x.png in Resources */,
+				DBE1A89D172691B0001EB1E2 /* cardBg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1353,6 +1376,9 @@
 				DBF73C24171BE0A600D52DC5 /* UMSocialSnsService.m in Sources */,
 				DBF73C36171BEC8300D52DC5 /* SettingScene.m in Sources */,
 				DB169864171C103100CCC0BB /* BaseScene.m in Sources */,
+				DBE1A895172679CF001EB1E2 /* SceneManager.m in Sources */,
+				DBE1A8A01726D33D001EB1E2 /* GameSettings.m in Sources */,
+				DBE1A8A31726E2B0001EB1E2 /* SettingLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

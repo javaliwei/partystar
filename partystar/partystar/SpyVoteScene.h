@@ -6,8 +6,18 @@
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
 //
 
-@interface SpyVoteScene : CCLayer {
+#import "BaseScene.h"
+
+@interface SpyVoteScene : BaseScene {
+    CGPoint restartPosition;
+    CGPoint voteResultPosition;
+    CGPoint cardsPosition;
     
+    NSString* populaceWord;
+    NSString* spyWord;
+    
+    int totalPlayerNum;
+    int spyIndex;
 }
 
 @end

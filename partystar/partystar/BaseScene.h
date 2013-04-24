@@ -6,14 +6,18 @@
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "GameSettings.h"
 
 @interface BaseScene : CCLayer {
     CGSize winSize;
+    CCSprite* bg;
+    
+    CGPoint bgPosition;
+    
+    SEL eventBlock;
 }
 
--(void)setLocation;
+-(void)setPosition;
 -(void)addBackground;
 -(void)addGameMenu;
 
@@ -30,5 +34,11 @@
 @interface CCLabelTTF(extension)
 
 +(id)labelWithString:(NSString*)label;
+
+@end
+
+@interface WSMenuWithOneItem : CCMenu
+
++(id)menuWithLabelPosiTag:(NSString*)label position:(CGPoint)position tag:(int)tag selector:(SEL)selector target:(id)target;
 
 @end

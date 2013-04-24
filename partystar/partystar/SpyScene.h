@@ -7,28 +7,21 @@
 //
 
 #import "BaseScene.h"
+#import "SpyIdentityScene.h"
+#import "SceneManager.h"
 
 @interface SpyScene : BaseScene {
     
-    CCSprite *bg;
-    
-    CCMenuItem *homeItem;
-    CCMenuItem *startItem;
-    CCMenuItem *minusItem;
-    CCMenuItem *addItem;
-    CCMenuItem *helpItem;
-    CCMenuItem *settingItem;
-    
-    
     //位置信息
-    CGPoint homeLocation;
-    CGPoint startLocation;
-    CGPoint minusLocation;
-    CGPoint addLocation;
-    CGPoint helpLocation;
-    CGPoint settingLocation;
-
-    CGPoint bgLocation;
+    CGPoint playerNumLabelPosition;
+    CGPoint playerNumPosition;
+    
+    CGPoint backPosition;
+    CGPoint startPosition;
+    CGPoint minusPosition;
+    CGPoint addPosition;
+    CGPoint helpPosition;
+    CGPoint settingPosition;
 }
 
 @end

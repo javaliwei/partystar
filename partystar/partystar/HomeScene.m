@@ -13,98 +13,54 @@
 @implementation HomeScene
 
 
--(void)setLocation{
+-(void)setPosition{
     
-    titleLocation = ccp(winSize.width*0.5,winSize.height*0.8);
+    titlePosition = ccp(winSize.width*0.5,winSize.height*0.8);
     
-    gameSpyLocation = ccp(winSize.width*0.5,winSize.height*0.7);
+    gameSpyPosition = ccp(winSize.width*0.5,winSize.height*0.7);
     
-    gameGuessLocation =ccp(winSize.width*0.5,winSize.height*0.6);
+    gameGuessPosition =ccp(winSize.width*0.5,winSize.height*0.6);
     
-    gameMoreLocation = ccp(winSize.width*0.5,winSize.height*0.5);
+    gameMorePosition = ccp(winSize.width*0.5,winSize.height*0.5);
     
-    settingLocation = ccp(winSize.width*0.35, -winSize.height*0.40);
+    settingPosition = ccp(winSize.width*0.35, -winSize.height*0.40);
     
-    
-    
-    bgLocation = ccp(winSize.width*0.5, winSize.height*0.5);
 }
 
 -(void)addGameTitle{
-    gameTitle = [CCSprite spriteWithFile:@"logo_home.png"];
-    gameTitle.position = titleLocation;
+    CCSprite* gameTitle = [CCSprite spriteWithFile:@"logo_home.png"];
+    gameTitle.position = titlePosition;
     [self addChild:gameTitle z:0];
     
     
 //    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Challenge" fontName:@"ChalkboardSE-Bold" fontSize:90];
-//    label.position = titleLabelLocation;
+//    label.position = titleLabelPosition;
 //    label.color = ccc3(16,174,231);
 //    
 //    [self addChild:label z:0];
-}
-
--(void)addBackground{
-    
-    if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone
-       && winSize.height == IPHONE5_HEIGHT){
-        bg = [CCSprite spriteWithFile:@"bg-iphone5.png"];
-    } else {
-        bg = [CCSprite spriteWithFile:@"bg.png"];
-    }
-    bg.position = bgLocation;
-    
-    [self addChild:bg z:-1];
-    
 }
 
 #pragma mark -- Add all menu item
 
 -(void)addGameMenu{
     
-    [self addGameMenuItem];
-    [self addSettingItem];
-}
-
--(void)addGameMenuItem{
-    SEL eventBlock = @selector(homeClick:);
-    
     CCLabelTTF* spyLabel = [CCLabelTTF labelWithString:@"谁是卧底"];
-    gameSpyItem = [CCMenuItemFont itemWithLabel:spyLabel target:self selector:eventBlock];
+    CCMenuItem* gameSpyItem = [CCMenuItemFont itemWithLabel:spyLabel target:self selector:eventBlock];
     
-    gameSpyItem.position = gameSpyLocation;
+    gameSpyItem.position = gameSpyPosition;
     gameSpyItem.tag = tag_home_spy;
     
     CCLabelTTF* guessLabel = [CCLabelTTF labelWithString:@"心有灵犀"];
-    gameGuessItem = [CCMenuItemFont itemWithLabel:guessLabel target:self selector:eventBlock];
-    gameGuessItem.position = gameGuessLocation;
+    CCMenuItem* gameGuessItem = [CCMenuItemFont itemWithLabel:guessLabel target:self selector:eventBlock];
+    gameGuessItem.position = gameGuessPosition;
     gameGuessItem.tag = tag_home_guess;
     
-    
-    
     CCMenu *menu =[CCMenu menuWithItems:gameSpyItem, gameGuessItem, nil];
-//    menu.position = CGPointZero;
     [menu alignItemsVerticallyWithPadding:40];
     [self addChild:menu z:2];
     
-}
-
--(void)addSettingItem{
-    SEL eventBlock = @selector(homeClick:);
-    //创建菜单项
-    
-//    settingItem = [CCMenuItemImage itemWithNormalImage:@"button_setting-ipad.png" selectedImage:nil target:self selector:@selector(enterGameSetting)];
-    
-    
-    CCLabelTTF* settingLabel = [CCLabelTTF labelWithString:@"设置"];
-    settingItem = [CCMenuItemFont itemWithLabel:settingLabel target:self selector:eventBlock];
-    settingItem.position = settingLocation;
-    settingItem.tag = tag_setting;
-    
-    //创建菜单
-    
-    CCMenu *menu =[CCMenu menuWithItems:settingItem, nil];
-    [self addChild:menu z:2];
-    
+    WSMenuWithOneItem* settingMenu = [WSMenuWithOneItem menuWithLabelPosiTag:@"设置" position:settingPosition tag:tag_setting selector:eventBlock target:self];
+    [self addChild:settingMenu z:2];
 }
 
 //-(void)playBackgroundMusic{
@@ -122,10 +78,10 @@
 //    
 //}
 
-#pragma mark homeClick - handle all click event
+#pragma mark clickHandler - handle all click event
 
--(void)homeClick:(id)sender{
-    CCLOG(@"homeClicked");
+-(void)clickHandler:(id)sender{
+    CCLOG(@"clickHandler");
     CCMenuItem* item = (CCMenuItem*)sender;
     switch (item.tag) {
         case tag_home_spy:{

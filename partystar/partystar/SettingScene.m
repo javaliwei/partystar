@@ -19,7 +19,7 @@
         self.isAccelerometerEnabled = YES;
         self.isTouchEnabled = YES;
         
-        glClearColor(1, 1, 1, 1);
+//        glClearColor(1, 1, 1, 1);
         
         CGSize size = [[CCDirector sharedDirector] winSize];
         
